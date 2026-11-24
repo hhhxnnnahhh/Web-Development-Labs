@@ -1,0 +1,35 @@
+
+### Get all posts
+GET http://localhost:3000/posts
+
+### Create a post
+POST http://localhost:3000/posts
+Content-Type: application/json
+
+{
+    "title": "My first post",
+    "content": "Hello Twitter!"
+}
+
+### Edit post 1
+PUT http://localhost:3000/posts/1
+Content-Type: application/json
+
+{
+    "title": "Updated title",
+    "content": "Updated content"
+}
+
+### Add comment
+POST http://localhost:3000/posts/1/comments
+Content-Type: application/json
+
+{
+    "content": "Great post!"
+}
+
+### Get comments
+GET http://localhost:3000/posts/1/comments
+
+### Delete post 1
+DELETE http://localhost:3000/posts/1
